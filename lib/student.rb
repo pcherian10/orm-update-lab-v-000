@@ -31,7 +31,7 @@ class Student
     if self.id
       self.update
     end
-    sql =<<-SQL
+    sql = <<-SQL
       INSERT INTO students (name, grade)
       VALUES (?,?)
     SQL
@@ -50,7 +50,7 @@ class Student
 
   def self.find_by_name (name)
 
-    sql =<<-SQL
+    sql = <<-SQL
       SELECT *
       FROM students
       WHERE name = ?
@@ -71,7 +71,7 @@ class Student
   end
 
   def update
-    sql =<<-SQL
+    sql = <<-SQL
       UPDATE students
       SET name = ?, grade = ? WHERE id = ?
     SQL
